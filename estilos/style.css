@@ -18,7 +18,7 @@
   --fundo-principal: #e2e2e2;
   --texto: #222222;
   --texto-inverso: #ffffff;
-  --destaque: #0AA; 
+  --destaque: #019292; 
   --destaque-inverso: #0000ff;
   --fundo-card: #ffffff;
 }
@@ -123,7 +123,7 @@ article{
 }
 article h2{
   color: var(--destaque) ;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -178,6 +178,37 @@ article#video > .video-container{
   background-color: var(--destaque-inverso);
   border-radius: 4px;
 }
+
+#formacao-container{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#formacao-container .curso{
+  background-color: var(--fundo-principal);
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  padding-left: 15px;
+  transition: border-width 0.4s;
+}
+
+#formacao-container .curso:hover{
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+#formacao-container .periodo{
+  font-size: 0.8em;
+  font-weight: bolder;
+  color: var(--texto);
+}
+
+#formacao-container .instituicao{
+  color:#0000ffa4;
+  font-size: 1.1em;
+}
+
 
 @media  screen and (min-width:768px) {
   #skillcontainer{
