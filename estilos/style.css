@@ -18,9 +18,10 @@
   --fundo-principal: #e2e2e2;
   --texto: #222222;
   --texto-inverso: #ffffff;
-  --destaque: #019292; 
-  --destaque-inverso: #0000ff;
+  --destaque-inverso: #5555c2; 
+  --destaque:#328fec;
   --fundo-card: #ffffff;
+  --imersao:rgba(165, 8, 8, 0.76);
 }
 
 body{
@@ -104,11 +105,11 @@ div#social{
 }
 
 section#ficha > div#social > a.redes{
-  color: #0000ff;
+  color: var(--destaque);
 }
 
 section#ficha > div#social > a.redes:hover{
-  color: darkred;
+  color: var(--imersao);
 }
 
 section#detalhes{
@@ -209,9 +210,102 @@ article#video > .video-container{
   font-size: 1.1em;
 }
 
+#projeto-container{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-width 0.4s;
+}
+
+#projeto-container .projeto:hover{
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+#projeto-container .foto{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+
+#projeto-container h3{
+  color: var(--destaque-inverso);
+}
+
+#projeto-container .sumario:hover{
+  color: var(--destaque-inverso);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#projeto-container .botao{
+  background-color: var(--destaque-inverso);
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+  border: 0px;
+  border-radius: 8px;
+}
+
+#projeto-container .botao:hover{
+  background-color: var(--imersao);
+  cursor: pointer;
+}
+
+#projeto-container .botao a{
+  color: var(--texto-inverso);
+  text-decoration: none;
+}
+
+footer{
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 8px;
+}
+
+footer a{
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--texto-inverso);
+}
+
+footer a:hover{
+  color: var(--texto);
+}
+
 
 @media  screen and (min-width:768px) {
   #skillcontainer{
     grid-template-columns: 1fr 1fr;
+  }
+ 
+  #projeto-container .projeto{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info{
+    max-width: 80%;
+  }
+
+  #projeto-container .foto{
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
   }
 }
