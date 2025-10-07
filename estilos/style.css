@@ -18,8 +18,8 @@
   --fundo-principal: #e2e2e2;
   --texto: #222222;
   --texto-inverso: #ffffff;
-  --destaque-inverso: #5555c2; 
-  --destaque:#328fec;
+  --destaque-inverso: #6565eb; 
+  --destaque:#000094;/*#328fec*/
   --fundo-card: #ffffff;
   --imersao:rgba(165, 8, 8, 0.76);
 }
@@ -251,24 +251,50 @@ article#video > .video-container{
   font-size: 1.1em;
 }
 
-#projeto-container .botao{
+#botao{ /*botao projetos avulsos*/
+  display: block;
   background-color: var(--destaque-inverso);
-  font-weight: bold;
+  color: var(--texto-inverso);
+  text-decoration: none;
+  text-align: center;
   width: 100px;
-  height: 50px;
-  margin: 5px;
-  border: 0px;
+  height: 35px;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+#botao:hover{
+  text-decoration: underline;
+  height: 37px;
+  width: 105px;
+  padding-top: 6px;
+}
+
+#botao-projetos{
+  display: block;
+  background-color: var(--destaque-inverso);
+  color: var(--texto-inverso);
+  text-align: center;
+  text-decoration: none;
+  padding: 3px;
+  height: 30px;
+  width: 190px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
   border-radius: 8px;
 }
 
-#projeto-container .botao:hover{
-  background-color: var(--imersao);
-  cursor: pointer;
-}
-
-#projeto-container .botao a{
-  color: var(--texto-inverso);
-  text-decoration: none;
+#botao-projetos:hover{
+  text-decoration: underline;
+  height: 33px;
+  width: 195px;
+  padding-top: 4px;
 }
 
 footer{
@@ -285,7 +311,9 @@ footer a{
 }
 
 footer a:hover{
-  color: var(--texto);
+  color: var(--texto-inverso);
+  text-decoration: underline;
+  font-size: 1.05em;
 }
 
 
