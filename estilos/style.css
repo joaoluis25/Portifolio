@@ -251,6 +251,15 @@ article#video > .video-container{
   font-size: 1.1em;
 }
 
+.linkxyz{
+  text-decoration: none;
+  color: var(--destaque-inverso);
+}
+
+.linkxyz:hover{
+  text-decoration: underline;
+}
+
 #botao{ /*botao projetos avulsos*/
   display: block;
   background-color: var(--destaque-inverso);
