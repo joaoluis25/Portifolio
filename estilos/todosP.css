@@ -178,6 +178,29 @@ article h2{
   padding-top: 6px;
 }
 
+#botao-portifolio{
+  display: block;
+  background-color: var(--destaque-inverso);
+  color: var(--texto-inverso);
+  text-align: center;
+  text-decoration: none;
+  padding: 3px;
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
+  border-radius: 8px;
+}
+
+#botao-portifolio:hover{
+  text-decoration: underline;
+  height: 33px;
+  width: 255px;
+  padding-top: 4px;
+}
+
 footer{
     background-color: var(--destaque);
     color: var(--texto-inverso);
