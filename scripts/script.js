@@ -1,4 +1,4 @@
-const botao = document.getElementById('botao-tema');
+/*const botao = document.getElementById('botao-tema');
 const body = document.body;
 
 // Persistência do tema
@@ -20,6 +20,35 @@ botao.addEventListener('click', () => {
   const isescuro = body.classList.toggle('escuro');
   temaEscuro(isescuro);
   localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
+});
+*/
+
+const botao = document.getElementById('botao-tema');
+const body = document.body;
+
+// Carregar tema salvo
+const temasalvo = localStorage.getItem('tema');
+temaEscuro(temasalvo === 'escuro');  // ← ISSO FALTAVA
+
+// Função para ativar/desativar o modo escuro
+function temaEscuro(ativo) {
+    if (ativo) {
+        body.classList.add('escuro');
+        botao.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+        body.classList.remove('escuro');
+        botao.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+}
+
+// Clique no botão
+botao.addEventListener('click', (event) => {
+    event.preventDefault(); // ← Impede o <a> de recarregar a página
+
+    const isEscuro = body.classList.toggle('escuro');
+
+    temaEscuro(isEscuro); // Atualiza ícone
+    localStorage.setItem('tema', isEscuro ? 'escuro' : 'claro');
 });
 
 // Scroll suave para links de navegação

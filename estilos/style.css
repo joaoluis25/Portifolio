@@ -24,6 +24,10 @@
   --imersao:rgba(165, 8, 8, 0.76);
 }
 
+body.escuro{
+  background-color: rgba(46, 46, 46, 0.849);
+}
+
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
