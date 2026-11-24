@@ -1,0 +1,1 @@
+Adicione aqui seu vídeo MP4 ou WebM. No editor, aba Perfil, informe videos/apresentacao.mp4 (ou o nome real). Opcional: arquivo .vtt de legendas. Use nomes sem espaços ou acentos.
